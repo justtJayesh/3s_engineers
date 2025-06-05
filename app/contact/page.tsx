@@ -1,63 +1,64 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { motion } from "framer-motion";
-import { MapPin, Search } from "lucide-react";
+import { MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import {
-    Select,
-    SelectContent,
-    SelectItem,
-    SelectTrigger,
-    SelectValue,
-} from "@/components/ui/select";
+// import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+// import {
+//     Select,
+//     SelectContent,
+//     SelectItem,
+//     SelectTrigger,
+//     SelectValue,
+// } from "@/components/ui/select";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+// import Image from "next/image";
 
-const locations = [
-    {
-        id: 1,
-        name: "SteelCorp Headquarters",
-        country: "Netherlands",
-        business: "Corporate",
-    },
-    {
-        id: 2,
-        name: "SteelCorp Manufacturing",
-        country: "Germany",
-        business: "Production",
-    },
-    {
-        id: 3,
-        name: "SteelCorp Americas",
-        country: "United States",
-        business: "Sales",
-    },
-    {
-        id: 4,
-        name: "SteelCorp Asia Pacific",
-        country: "Singapore",
-        business: "Distribution",
-    },
-];
+// const locations = [
+//     {
+//         id: 1,
+//         name: "SteelCorp Headquarters",
+//         country: "Netherlands",
+//         business: "Corporate",
+//     },
+//     {
+//         id: 2,
+//         name: "SteelCorp Manufacturing",
+//         country: "Germany",
+//         business: "Production",
+//     },
+//     {
+//         id: 3,
+//         name: "SteelCorp Americas",
+//         country: "United States",
+//         business: "Sales",
+//     },
+//     {
+//         id: 4,
+//         name: "SteelCorp Asia Pacific",
+//         country: "Singapore",
+//         business: "Distribution",
+//     },
+// ];
 
 export default function ContactPage() {
-    const [searchTerm, setSearchTerm] = useState("");
-    const [selectedBusiness, setSelectedBusiness] = useState("All businesses");
-    const [selectedCountry, setSelectedCountry] = useState("All countries");
+    // const [searchTerm, setSearchTerm] = useState("");
+    // const [selectedBusiness, setSelectedBusiness] = useState("All businesses");
+    // const [selectedCountry, setSelectedCountry] = useState("All countries");
 
-    const filteredLocations = locations.filter((location) => {
-        return (
-            location.name.toLowerCase().includes(searchTerm.toLowerCase()) &&
-            (selectedBusiness === "All businesses" ||
-                location.business === selectedBusiness) &&
-            (selectedCountry === "All countries" ||
-                location.country === selectedCountry)
-        );
-    });
+    // const filteredLocations = locations.filter((location) => {
+    //     return (
+    //         location.name.toLowerCase().includes(searchTerm.toLowerCase()) &&
+    //         (selectedBusiness === "All businesses" ||
+    //             location.business === selectedBusiness) &&
+    //         (selectedCountry === "All countries" ||
+    //             location.country === selectedCountry)
+    //     );
+    // });
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -70,7 +71,7 @@ export default function ContactPage() {
             {/* Hero Section */}
             <section className="relative h-screen overflow-hidden">
                 <div className="absolute inset-0">
-                    <img
+                        <img
                         src="/placeholder.svg?height=1080&width=1920"
                         alt="SteelCorp contact"
                         className="w-full h-full object-cover"
@@ -400,7 +401,7 @@ export default function ContactPage() {
                                         Interactive map would be displayed here
                                     </p>
                                     <p className="text-sm text-neutral-500 mt-2">
-                                        Showing {filteredLocations.length}{" "}
+                                        Showing{" "}
                                         locations
                                     </p>
                                 </div>

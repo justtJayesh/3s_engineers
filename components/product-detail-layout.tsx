@@ -7,6 +7,7 @@ import Link from "next/link";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import type { ProductDetailProps } from "@/data/products-services-data";
+// import Image from "next/image";
 
 const getFeatureIcon = (iconType: string) => {
     switch (iconType) {

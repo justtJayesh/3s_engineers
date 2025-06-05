@@ -8,6 +8,7 @@ import {
     Paintbrush,
     Lightbulb,
 } from "lucide-react";
+// import Image from "next/image";
 
 interface ServiceCardProps {
     title: string;

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Play, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -13,18 +13,19 @@ import ServiceCard from "@/components/service-card";
 import ValueCard from "@/components/value-card";
 import PhotoGallery from "@/components/photo-gallery";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function LandingPage() {
     const { scrollYProgress } = useScroll();
     const heroRef = useRef<HTMLDivElement>(null);
-    const [isLoaded, setIsLoaded] = useState(false);
+    // const [isLoaded, setIsLoaded] = useState(false);
 
     // Parallax effects
     const textY = useTransform(scrollYProgress, [0, 0.3], [0, 100]);
-    const opacity = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
+    // const opacity = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
 
     useEffect(() => {
-        setIsLoaded(true);
+        // setIsLoaded(true);
         window.scrollTo(0, 0);
     }, []);
 
@@ -315,10 +316,10 @@ export default function LandingPage() {
                                 />
                                 <div className="absolute -bottom-6 -left-6 bg-[#2986C7] p-6 max-w-xs">
                                     <p className="text-[#e9f3fa] font-light italic">
-                                        "Our mission is to forge the future
-                                        through innovative steel solutions that
-                                        build a stronger, more sustainable
-                                        world."
+                                        &ldquo;Our mission is to forge the
+                                        future through innovative steel
+                                        solutions that build a stronger, more
+                                        sustainable world.&ldquo;
                                     </p>
                                 </div>
                             </div>

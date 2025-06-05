@@ -1,12 +1,9 @@
 import { notFound } from "next/navigation";
 import { serviceData } from "@/data/products-services-data";
 import ProductDetailLayout from "@/components/product-detail-layout";
+import { Metadata } from "next";
 
-interface ServicePageProps {
-    params: {
-        slug: string;
-    };
-}
+type Params = Promise<{ slug: string }>;
 
 export async function generateStaticParams() {
     return Object.keys(serviceData).map((slug) => ({
@@ -14,8 +11,9 @@ export async function generateStaticParams() {
     }));
 }
 
-export default function ServicePage({ params }: ServicePageProps) {
-    const service = serviceData[params.slug];
+export default async function ServicePage({ params }: { params: Params }) {
+    const { slug } = await params;
+    const service = serviceData[slug];
 
     if (!service) {
         notFound();
@@ -24,8 +22,13 @@ export default function ServicePage({ params }: ServicePageProps) {
     return <ProductDetailLayout product={service} type="service" />;
 }
 
-export async function generateMetadata({ params }: ServicePageProps) {
-    const service = serviceData[params.slug];
+export async function generateMetadata({
+    params,
+}: {
+    params: Params;
+}): Promise<Metadata> {
+    const { slug } = await params;
+    const service = serviceData[slug];
 
     if (!service) {
         return {

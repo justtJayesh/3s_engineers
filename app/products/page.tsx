@@ -6,6 +6,7 @@ import { ArrowRight } from "lucide-react";
 import { productData } from "@/data/products-services-data";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+// import Image from "next/image";
 
 export default function ProductsPage() {
     const products = Object.values(productData);

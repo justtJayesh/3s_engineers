@@ -6,49 +6,50 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import VideoBackground from "@/components/video-background";
 import { useEffect } from "react";
+// import Image from "next/image";
 
-const teamMembers = [
-    {
-        name: "John Smith",
-        position: "Chief Executive Officer",
-        image: "/placeholder.svg?height=300&width=300",
-    },
-    {
-        name: "Sarah Johnson",
-        position: "Chief Technology Officer",
-        image: "/placeholder.svg?height=300&width=300",
-    },
-    {
-        name: "Michael Chen",
-        position: "Chief Operations Officer",
-        image: "/placeholder.svg?height=300&width=300",
-    },
-    {
-        name: "Emily Davis",
-        position: "Chief Financial Officer",
-        image: "/placeholder.svg?height=300&width=300",
-    },
-    {
-        name: "Robert Wilson",
-        position: "VP of Engineering",
-        image: "/placeholder.svg?height=300&width=300",
-    },
-    {
-        name: "Lisa Anderson",
-        position: "VP of Sales",
-        image: "/placeholder.svg?height=300&width=300",
-    },
-    {
-        name: "David Brown",
-        position: "VP of Manufacturing",
-        image: "/placeholder.svg?height=300&width=300",
-    },
-    {
-        name: "Jennifer Taylor",
-        position: "VP of Quality Assurance",
-        image: "/placeholder.svg?height=300&width=300",
-    },
-];
+// const teamMembers = [
+//     {
+//         name: "John Smith",
+//         position: "Chief Executive Officer",
+//         image: "/placeholder.svg?height=300&width=300",
+//     },
+//     {
+//         name: "Sarah Johnson",
+//         position: "Chief Technology Officer",
+//         image: "/placeholder.svg?height=300&width=300",
+//     },
+//     {
+//         name: "Michael Chen",
+//         position: "Chief Operations Officer",
+//         image: "/placeholder.svg?height=300&width=300",
+//     },
+//     {
+//         name: "Emily Davis",
+//         position: "Chief Financial Officer",
+//         image: "/placeholder.svg?height=300&width=300",
+//     },
+//     {
+//         name: "Robert Wilson",
+//         position: "VP of Engineering",
+//         image: "/placeholder.svg?height=300&width=300",
+//     },
+//     {
+//         name: "Lisa Anderson",
+//         position: "VP of Sales",
+//         image: "/placeholder.svg?height=300&width=300",
+//     },
+//     {
+//         name: "David Brown",
+//         position: "VP of Manufacturing",
+//         image: "/placeholder.svg?height=300&width=300",
+//     },
+//     {
+//         name: "Jennifer Taylor",
+//         position: "VP of Quality Assurance",
+//         image: "/placeholder.svg?height=300&width=300",
+//     },
+// ];
 
 const values = [
     {
@@ -259,13 +260,14 @@ export default function AboutPage() {
                                 going through the cites of the word in classical
                                 literature, discovered the undoubtable source.
                                 Lorem Ipsum comes from sections 1.10.32 and
-                                1.10.33 of "de Finibus Bonorum et Malorum" (The
-                                Extremes of Good and Evil) by Cicero, written in
-                                45 BC. Sections 1.10.32 and 1.10.33 from "de
-                                Finibus Bonorum et Malorum" by Cicero are also
-                                reproduced in their exact original form,
-                                accompanied by English versions from the 1914
-                                translation by H. Rackham.
+                                1.10.33 of &ldquo;de Finibus Bonorum et
+                                Malorum&ldquo; (The Extremes of Good and Evil)
+                                by Cicero, written in 45 BC. Sections 1.10.32
+                                and 1.10.33 from &ldquo;de Finibus Bonorum et
+                                Malorum&ldquo; by Cicero are also reproduced in
+                                their exact original form, accompanied by
+                                English versions from the 1914 translation by H.
+                                Rackham.
                             </p>
                             <p className="text-neutral-700 leading-relaxed">
                                 We at 3S Engineering Solutions are very well
@@ -282,9 +284,9 @@ export default function AboutPage() {
                                 & Operations (MMO) related field. Be it an
                                 imported Oil Seal or hard to find imported
                                 Bearing or a Chain that elongates very
-                                frequently or a belt that doesn't last long
-                                enough. We have solutions & products that will
-                                definitely solve the problem & help you in
+                                frequently or a belt that doesn&lsquo;t last
+                                long enough. We have solutions & products that
+                                will definitely solve the problem & help you in
                                 getting best service life & uptime of the
                                 equipment.
                             </p>
